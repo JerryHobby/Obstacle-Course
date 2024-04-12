@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: a7b1f5d1ce6544fbaadadd5358495a03
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - roboPrefab: {fileID: 7225950167819647495, guid: ffe9fc508c8e04de4bc8eb2638686452, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
