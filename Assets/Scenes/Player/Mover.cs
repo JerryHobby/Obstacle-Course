@@ -4,21 +4,24 @@ namespace Scenes.Player
 {
     public class Mover : MonoBehaviour
     {
-        private float speed = 12f;
-        private float jumpSpeed = 200f;
-        private Rigidbody _rigidBody;
-
+        private const float Speed = 12f;
+        private const float JumpSpeed = 200f;
         private const int Orientation = -1;
 
+        private Rigidbody _rigidBody;
+        
         private void Start()
         {
             _rigidBody = GetComponent<Rigidbody>();
         }
 
+        
         private void FixedUpdate()
         {
             MovePlayer();
         }
+        
+        
         private void MovePlayer()
         {
             if (Input.GetKey(KeyCode.Space))
@@ -47,14 +50,15 @@ namespace Scenes.Player
             }
         }
 
+        
         private void Move(Vector3 direction)
         {
             if (direction == Vector3.up && _rigidBody.velocity.y > 0)
                 return;
             
-            direction.x *= (speed * Orientation);
-            direction.y *= jumpSpeed;
-            direction.z *= (speed * Orientation);
+            direction.x *= (Speed * Orientation);
+            direction.y *= JumpSpeed;
+            direction.z *= (Speed * Orientation);
 
             _rigidBody.AddForce(direction);
         }
