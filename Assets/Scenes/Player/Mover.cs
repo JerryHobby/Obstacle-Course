@@ -4,10 +4,9 @@ namespace Scenes.Player
 {
     public class Mover : MonoBehaviour
     {
-        [SerializeField] private float speed = 150f;
-        [SerializeField] private float jumpSpeed = 5f;
+        private float speed = 12f;
+        private float jumpSpeed = 200f;
         private Rigidbody _rigidBody;
-        private const float MaxSpeed = 10f;
 
         private const int Orientation = -1;
 
@@ -15,19 +14,18 @@ namespace Scenes.Player
         {
             _rigidBody = GetComponent<Rigidbody>();
         }
-        private void Update()
+
+        private void FixedUpdate()
         {
             MovePlayer();
         }
-        private void FixedUpdate()
-        {
-            if (_rigidBody.velocity.magnitude > MaxSpeed)
-            {
-                _rigidBody.velocity = _rigidBody.velocity.normalized * MaxSpeed;
-            }
-        }
         private void MovePlayer()
         {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                Move(Vector3.up);
+            }
+            
             if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
             {
                 Move(Vector3.forward);
@@ -47,22 +45,18 @@ namespace Scenes.Player
             {
                 Move(Vector3.right);
             }
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Move(Vector3.up);
-            }
         }
 
         private void Move(Vector3 direction)
         {
-            direction.x = direction.x * speed * Time.deltaTime * Orientation;
-            direction.y = direction.y * speed * Time.deltaTime * jumpSpeed;
-            direction.z = direction.z * speed * Time.deltaTime * Orientation;
+            if (direction == Vector3.up && _rigidBody.velocity.y > 0)
+                return;
+            
+            direction.x *= (speed * Orientation);
+            direction.y *= jumpSpeed;
+            direction.z *= (speed * Orientation);
 
             _rigidBody.AddForce(direction);
-
-            //transform.Translate(direction);
         }
     }
 }

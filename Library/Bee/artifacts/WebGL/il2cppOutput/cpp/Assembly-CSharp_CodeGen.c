@@ -1010,7 +1010,6 @@ extern void Callback_Invoke_m8FC896A6BE9EC8A0EF20EC0DA8919B676FF741F1 (void);
 extern void Callback_BeginInvoke_mF355A6A17D2D59BEE10808895FA5A2F5A6A99ABC (void);
 extern void Callback_EndInvoke_m60EB5224A9C647575DE86F8268833DE95ACCAF7D (void);
 extern void Mover_Start_m60D45B621376802DE2E058A8E83FD5B3E99EF6A2 (void);
-extern void Mover_Update_mCFD5683CA4652222A04A9D321FDAC969409B531D (void);
 extern void Mover_FixedUpdate_mCFB80DC06C70D8EC756C32ADBB5CE2C520407FA8 (void);
 extern void Mover_MovePlayer_m445CE03C584BD9B2998BDF446432BC0901CD757F (void);
 extern void Mover_Move_mEDB1D5A90360126D2F013A68281FFDCB1724991E (void);
@@ -1042,7 +1041,7 @@ extern void FallingCube_ShowAfterDelay_m9038D7CDD7B2A37160E1CE9E937FC097B29DE762
 extern void FallingCube_Hide_mB24C4EF8E505C08AC92F43655424B7E76CD7FA8A (void);
 extern void FallingCube_Show_m189B10152B5699E772B8E6D50EA313C6A5970175 (void);
 extern void FallingCube__ctor_mCAE2E17317079AB90A354F2D480E8C2378039ACD (void);
-static Il2CppMethodPointer s_methodPointers[1030] = 
+static Il2CppMethodPointer s_methodPointers[1029] = 
 {
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
@@ -2042,7 +2041,6 @@ static Il2CppMethodPointer s_methodPointers[1030] =
 	Callback_BeginInvoke_mF355A6A17D2D59BEE10808895FA5A2F5A6A99ABC,
 	Callback_EndInvoke_m60EB5224A9C647575DE86F8268833DE95ACCAF7D,
 	Mover_Start_m60D45B621376802DE2E058A8E83FD5B3E99EF6A2,
-	Mover_Update_mCFD5683CA4652222A04A9D321FDAC969409B531D,
 	Mover_FixedUpdate_mCFB80DC06C70D8EC756C32ADBB5CE2C520407FA8,
 	Mover_MovePlayer_m445CE03C584BD9B2998BDF446432BC0901CD757F,
 	Mover_Move_mEDB1D5A90360126D2F013A68281FFDCB1724991E,
@@ -2075,7 +2073,7 @@ static Il2CppMethodPointer s_methodPointers[1030] =
 	FallingCube_Show_m189B10152B5699E772B8E6D50EA313C6A5970175,
 	FallingCube__ctor_mCAE2E17317079AB90A354F2D480E8C2378039ACD,
 };
-static const int32_t s_InvokerIndices[1030] = 
+static const int32_t s_InvokerIndices[1029] = 
 {
 	7961,
 	5595,
@@ -3077,7 +3075,6 @@ static const int32_t s_InvokerIndices[1030] =
 	5595,
 	5595,
 	5595,
-	5595,
 	4616,
 	5595,
 	5595,
@@ -3112,7 +3109,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	1030,
+	1029,
 	s_methodPointers,
 	0,
 	NULL,

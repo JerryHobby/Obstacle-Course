@@ -108,8 +108,6 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 0}
-    - Class: 114
       Script: {instanceID: 16884}
     - Class: 114
       Script: {instanceID: 17230}
@@ -150,7 +148,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 21454}
     - Class: 114
-      Script: {instanceID: 23800}
+      Script: {instanceID: 23764}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -696,7 +694,7 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreak2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 6cfdf50a197ae560ea738dbce6b03ef5
+      Hash: a5be8cffb99a3cebeb338f19fee4561c
     assemblyName: Assembly-CSharp
     namespaceName: Scenes.Player
     className: Mover

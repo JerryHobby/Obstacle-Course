@@ -14,7 +14,6 @@ namespace Scenes.Player
             _scorer = GetComponent<Scorer>();
         }
 
-
         private void OnCollisionEnter(Collision other)
         {
             if (other.gameObject.CompareTag("Base")) return;
@@ -26,30 +25,36 @@ namespace Scenes.Player
             {
                 return;
             }
-            _hitList.Add(objId);
+
 
             if (other.gameObject.CompareTag("Bonus"))
             {
                 _scorer.AddScore(500);
+                return;
 
-            } else if (other.gameObject.CompareTag("Finish"))
+            } 
+            
+            if (other.gameObject.CompareTag("Finish"))
             {
                 _scorer.AddScore(1000);
                 GetComponent<Mover>().enabled = false;
                 GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 GameManager.OnGameOver.Invoke();
+                return;
             }
-            else if (other.gameObject.CompareTag("Floor"))
+            
+            if (other.gameObject.CompareTag("Floor"))
             {
                 _scorer.AddScore(-1000);
                 GetComponent<Mover>().enabled = false;
                 GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 GameManager.OnGameOver.Invoke();
+                return;
             }
-            else
-            {
-                _scorer.AddScore(-100);
-            }
+
+            // all standard penalty objects
+            _scorer.AddScore(-100);
+            _hitList.Add(objId);
         }
     }
 }
